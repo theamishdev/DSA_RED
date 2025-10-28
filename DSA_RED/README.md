@@ -12,8 +12,7 @@ This repository is built to help in mastering core algorithmic concepts through 
 - Solutions are written in **C++**, following optimal and readable coding practices.  
 - All problems are organized and tracked through the **Notion workspace** linked below.
 
-🔗 **[View Questions on Notion](YOUR_NOTION_LINK_HERE)**  (will add soon)
-
+🔗 **[View Questions on Notion](https://www.notion.so/DSA_RED-572777ce24a843ea8d80442e574d3a66?source=copy_link)** 
 
 ---
 
