@@ -28,3 +28,4 @@ int main(){
 
     cout << binary_search(arr,start,end,target);
 }
+//Given an array return true or false for wether array is sorted or not using recursion.
