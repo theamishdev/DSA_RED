@@ -74,20 +74,21 @@ void PrintLL(Node *head)
             cout << " -> "; // This line is not necessary.
         temp = temp->next;
     }
+    cout<<endl;
 }
 
-bool srch(Node *head, int target)
+string srch(Node *head, int target)
 {
     Node *temp = head;
     while (temp != NULL)
     {
         if (temp->data == target)
         {
-            return true;
+            return "Element found in linked list";
         }
         temp = temp->next;
     }
-    return 0;
+    return "Element not found in linked list.";
 }
 
 int main()
@@ -95,7 +96,7 @@ int main()
     // Empty Linked List
     Node *head = NULL;
     Node *tail = NULL;
-    int target = 43;
+    int target = 44;
     // Insert values
     InsertAtHead(10, head, tail);
     InsertAtHead(20, head, tail);
@@ -104,11 +105,7 @@ int main()
     // Print Linked List
 
     PrintLL(head);
-    srch(head, target);
-    if (srch(head, target))
-        cout << "Found it!" << endl;
-    else
-        cout << "Not in the list." << endl;
+    cout << srch(head, target);
 
     return 0;
 }
