@@ -109,3 +109,12 @@ int main()
 
     return 0;
 }
+
+
+
+/* 
+IMP (HomeWork)
+#   find minimum and maximum in linked list.
+#   find sum of all elements in linked list.
+#   find even, odd elements in linked list.
+*/
