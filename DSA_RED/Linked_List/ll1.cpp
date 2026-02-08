@@ -64,14 +64,17 @@ Node *InsertAtEnd(int value, Node *&head, Node *&tail)
 }
 
 // this function prints the linked list
-/* void PrintLL(Node* head){
-    Node* temp = head;
-    while(temp != NULL){
+void PrintLL(Node *head)
+{
+    Node *temp = head;
+    while (temp != NULL)
+    {
         cout << temp->data;
-        if(temp->next != NULL) cout << " -> ";                  //This line is not necessary.
+        if (temp->next != NULL)
+            cout << " -> "; // This line is not necessary.
         temp = temp->next;
     }
-} */
+}
 
 bool srch(Node *head, int target)
 {
@@ -100,10 +103,12 @@ int main()
     InsertAtEnd(43, head, tail);
     // Print Linked List
 
-    // PrintLL(head);
+    PrintLL(head);
     srch(head, target);
-    if (srch(head, target)) cout << "Found it!" << endl;
-    else cout << "Not in the list." << endl;
+    if (srch(head, target))
+        cout << "Found it!" << endl;
+    else
+        cout << "Not in the list." << endl;
 
     return 0;
 }
