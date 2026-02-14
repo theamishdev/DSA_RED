@@ -3,7 +3,6 @@
 #include <string>
 #include <limits.h>
 using namespace std;
-
 class Node
 {
 public:
@@ -17,11 +16,10 @@ public:
         this->next = NULL;
     }
 };
-
 // this function returns the head of the updated linked lsit
 Node *InsertAtHead(int value, Node *&head, Node *&tail)
 {
-    if (head == NULL && tail == NULL)
+    if (head == NULL)
     {
         // empty ll insertion
 
@@ -43,10 +41,9 @@ Node *InsertAtHead(int value, Node *&head, Node *&tail)
     }
     return head;
 }
-
 Node *InsertAtEnd(int value, Node *&head, Node *&tail)
 {
-    if (head == NULL && tail == NULL)
+    if (head == NULL)
     {
         // empty ll insertion
         Node *newNode = new Node(value);
@@ -62,7 +59,6 @@ Node *InsertAtEnd(int value, Node *&head, Node *&tail)
     }
     return head;
 }
-
 // this function prints the linked list
 void PrintLL(Node *head)
 {
@@ -84,15 +80,25 @@ string srch(Node *head, int target)
     {
         if (temp->data == target)
         {
-            return "Element found in linked list";
+        return "Element found in linked list";
         }
         temp = temp->next;
     }
     return "Element not found in linked list.";
 }
+int get_length(Node *head){
+    int len=0;
+    Node *temp=head;
+    while(temp != NULL){
+        len++;
+        temp=temp->next;
+    } 
+    return len;
+}
 
 int main()
 {
+    cout << "START" << endl;
     // Empty Linked List
     Node *head = NULL;
     Node *tail = NULL;
@@ -106,11 +112,11 @@ int main()
 
     PrintLL(head);
     cout << srch(head, target);
+    cout<<endl;
+    cout<<"Length of linked list is: "<<get_length(head)<<endl;
 
     return 0;
 }
-
-
 
 /* 
 IMP (HomeWork)
