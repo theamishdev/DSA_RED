@@ -36,7 +36,6 @@ Node *InsertAtHead(int value, Node *&head, Node *&tail)
 }
 Node *InsertAtEnd(int value, Node *&head, Node *&tail)
 {
-    Node *temp = head;
     if (head == NULL)
     {
         Node *newNode = new Node(value);
